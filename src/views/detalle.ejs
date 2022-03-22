@@ -1,0 +1,40 @@
+<%- include('header.ejs') %>
+
+    <div> 
+        <ul class="list-group">
+
+            <li class="list-group-item">
+                <strong>Fecha de nacimiento </strong>
+                <%= cit.fnacimiento %>
+            </li> 
+            <li class="list-group-item">
+                <strong>Dependencias: </strong>
+                <%= cit.dependencia %>
+            </li>
+            <li class="list-group-item">
+                <strong>Observaciones: </strong>
+                <%= cit.observaciones %>
+            </li>
+            <li class="list-group-item">
+                <strong>Profesional: </strong>
+                <%= cit.profesional %>
+            </li>
+            <li class="list-group-item">
+                <strong>Diagnóstico medico: </strong>
+                <%= cit.diagnostico %>
+            </li>
+            <li class="list-group-item">
+                <strong>Antecedentes clinicos importantes: </strong>
+                <%= cit.antecedentes %>
+            </li>
+            <li class="list-group-item">
+                <strong>Peso: </strong>
+                <%= cit.peso %>
+            </li>
+            <li class="list-group-item">
+                <strong>Talla: </strong>
+                <%= cit.talla %>
+            </li>
+        </ul>
+    </div> 
+    <%- include('_footer.ejs') %>

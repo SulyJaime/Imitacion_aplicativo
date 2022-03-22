@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecer Contraseña</title>
+    <!-- For google icons  -->
+    <script src="https://kit.fontawesome.com/667417c7ec.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: rgb(178,178,224);
+            background: radial-gradient(circle, rgba(178,178,224,1) 0%, rgba(3,152,158,1) 35%, rgba(21,39,73,1) 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            font-family: Arial, Helvetica, sans-serif
+        }
+        
+        .container {
+            background-color: white;
+            width: 380px;
+            margin: auto;
+            height: 370px;
+            position: relative;
+            top: 12.5vh;
+            border-radius: 25px;
+            box-shadow: 0 0 10px black;
+        }
+        
+        #account {
+            position: relative;
+            top: -60px;
+            margin: auto;
+            left: calc(50% - 74px);
+            border-radius: 18px;
+            border-bottom-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            background: rgb(99, 140, 187);
+            background: radial-gradient(circle, rgb(10, 51, 98) 54%, rgba(10, 3, 60, 0.97) 100%);
+            background-repeat: no-repeat;
+            color: #e1cfcf;
+            font-size: 90px;
+            padding: 19px;
+            box-shadow: 0 0 5px black;
+        }
+        
+        .tabs {
+            display: flex;
+            position: relative;
+            top: -50px;
+            justify-content: center;
+            color: rgb(73, 71, 71);
+            height: 25px;
+        }
+        
+        .reg-tab,
+        .login-tab {
+            width: 50%;
+            text-align: center;
+            padding-bottom: 10px;
+            margin: auto 25px;
+            cursor: pointer;
+        }
+        
+        .reg-tab:hover,
+        .login-tab:hover {
+            color: rgb(10, 51, 98);
+            border-bottom: 4px solid rgb(10, 51, 98);
+        }
+        
+        .active {
+            color: rgb(10, 51, 98);
+            border-bottom: 4px solid rgb(10, 51, 98);
+        }
+        
+        #login-form {
+            display: block;
+            padding-top: 25px;
+        }
+        
+        #registration-form {
+            display: none;
+        }
+        
+        .msg {
+            visibility: hidden;
+            margin: 1px;
+            text-align: center;
+            color: red;
+        }
+        
+        form {
+            width: 90%;
+            margin: 15px auto;
+            margin-top: -55px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        input {
+            height: 27px;
+            margin: 5px;
+            border-radius: 15px;
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 17px;
+            text-align: center;
+            background-color: rgb(209, 209, 209);
+            color: rgb(73, 73, 73);
+        }
+        
+        .tnc {
+            display: flex;
+            align-items: center;
+            margin: auto;
+            color: rgb(54, 52, 52);
+        }
+        
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .options {
+            display: flex;
+            align-items: center;
+            font-style: italic;
+            margin-top: 25px;
+        }
+        
+        .remember {
+            display: flex;
+            align-items: center;
+            width: 50%;
+            text-align: center;
+        }
+        
+        .options a {
+            width: 50%;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        button {
+            margin: 3px auto;
+            font-size: 20px;
+            color: white;
+            background: rgb(3,152,158);
+            background: linear-gradient(90deg, rgba(3,152,158,1) 35%, rgba(21,39,73,1) 100%);
+            border: none;
+            padding: 10px 45px;
+            text-align: center;
+            border-radius: 18px;
+            cursor: pointer;
+            box-shadow: 0 0 2px rgb(117, 113, 113);
+        }
+        
+        button:hover {
+            background-color: rgba(0, 81, 255, 0.781);
+        }
+
+        /* making design responsive */
+        @media screen and (max-width:600px) {
+            .container{
+                width: 90%;
+            }
+        }
+        @media screen and (max-width:350px) {
+            .container{
+                width: 320px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <i id='account' class="fas fa-users"></i>
+        <div class="tabs">
+            <h2 class='login_tab' id="login_tab">Restablecer Contraseña</h2>
+        </div>
+
+        <div id="login-form">
+            <form action="/loginDos">
+                <p class="msg">Enviaremos tus datos al correo!</p>
+                <input type="text" name="username" id="username" placeholder="Nombre de usuario">
+                <input type="text" name="cumpleaños" id="cumpleaños" placeholder="Cumpleaños">
+                <br>
+                <button type="/inicio" id="btn" >Enviar</button> 
+                <button type="/inicio">Volver</button>
+            </form>
+        </div>
+
+        
+    </div>
+    <script>
+       
+        btn.addEventListener('click', (e) => {
+                alert('Te enviaremos un correo para que puedas restablecer la contraseña')
+            })
+
+    </script>
+</body>
+
+</html>

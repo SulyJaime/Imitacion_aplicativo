@@ -1,0 +1,59 @@
+<%- include('_header.ejs') %>
+
+
+<div  id="imagenF" class="bg-image" style=" background-image: url('');
+background-color: rgba(0, 255, 255, 0.13);"img-fluid alt="Responsive image">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col"><strong>Fecha Cita</strong></th>
+                <th scope="col"><strong>Nombre</strong></th>
+                <th scope="col"><strong>Apellido</strong></th>
+                <th scope="col"><strong>Email</strong></th>
+                <th scope="col"><strong>Acciones</strong></th>
+            </tr>
+        </thead>
+        <% for(var i=0; i<perfiles.length; i++){ %>
+        <tr>
+            <td><%= perfiles[i].fecha %></td>
+            <td><%= perfiles[i].nombre %></td>
+            <td><%= perfiles[i].apellido %></td>
+            <td><%= perfiles[i].email %></td>
+            <td>
+                <a style="text-decoration:none" class='bx bx-street-view bx-tada-hover color'href="/detalle/<%= perfiles[i].email + '/' + perfiles[i].nombre %>"></a>
+                &nbsp;
+                <a  style="text-decoration:none" class='bx bxs-edit bx-tada-hover' href="/modificar/<%= perfiles[i].email %>"></a>
+                &nbsp;
+                <a  style="text-decoration:none" class='bx bxs-trash bx-tada-hover btn_eliminar' href=""></a>
+
+                <!-- Estilo de los Iconos -->
+                <!-- <i class='bx bx-street-view bx-tada bx-rotate-180' ></i> -->
+                <!-- Comparacion Estatico y animacion -->
+                <!-- <i class='bx bxs-trash bx-tada bx-flip-vertical' ></i>
+                <i class='bx bxs-trash' ></i>
+
+                <i class='bx bxs-edit bx-burst' ></i> -->
+
+
+            </td>
+        </tr>
+        <% } %>
+
+    </table>
+
+</div>
+<!-- jQuery -->
+<script>
+    //var btn = document.getElementsByClassName(".btn_eliminar");
+
+    const btn_eliminar = document.querySelector('.btn_eliminar')
+
+    btn_eliminar.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('No tienes permiso para eliminar a un paciente')
+    })
+</script>
+
+
+
+<%- include('_footer.ejs') %>

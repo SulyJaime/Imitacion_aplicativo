@@ -1,0 +1,143 @@
+<%- include('_header.ejs') %>
+
+
+<% if(nuevo == true){ %>
+
+    <!-- Este form se muestra  -->
+    <div class="col-md-6 col-sm-6">
+        <!-- CONTACT FORM HERE -->
+        <form action="/guardar" id="appointment-form" role="form" method="post">
+    
+            <!-- SECTION TITLE -->
+            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                <h2>Ver perfil del Paciente</h2>
+            </div>
+    
+            <div class="wow fadeInUp" data-wow-delay="0.8s">
+                <!-- <div class="col-md-6 col-sm-6">
+                    <label for="name">Fecha de nacimiento</label>
+                    <input type="text" class="form-control" id="name" name="fNacimiento">
+                </div>
+     -->
+                <div class="col-md-6 col-sm-6">
+                    <label for="name">Dependencia</label>
+                    <input type="text" class="form-control" id="apellido" name="dependencia">
+                </div>
+    
+                <div class="col-md-6 col-sm-6">
+                    <label for="name">Observaciones</label>
+                    <input type="text" class="form-control" id="email" name="observaciones">
+                </div>
+    
+                <div class="col-md-6 col-sm-6">
+                    <label for="number">Profesional</label>
+                    <input type="number" class="form-control" id="telefono" name="profesional">
+                </div>
+    
+                <div class="col-md-6 col-sm-6">
+                    <label for="number">Email</label>
+                    <input type="number" class="form-control" id="familiar" name="email">
+                </div>
+    
+                <div class="col-md-6 col-sm-6">
+                    <label for="text">Diagnóstico</label>
+                    <input type="text" class="form-control" id="direccion" name="diagnostico">
+                </div>
+    
+                <div class="col-md-6 col-sm-6">
+                    <label for="text">Antecedentes</label>
+                    <input type="text" class="form-control" id="fNacimiento" name="antecedentes">
+                </div>
+    
+                <div class="col-md-6 col-sm-6">
+                    <label for="text">Peso:</label>
+                    <input type="text" name="peso">
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <label for="text">Talla:</label>
+                    <input type="text" name="talla">
+                </div>
+    
+                <button type="submit" class="form-control" id="cf-submit" name="submit">Agendar</button>
+            </div>
+        </form>
+    </div>
+    <!-- Aqui se modifica -->
+    <% }else{ %>
+<div class="col-md-6 col-sm-6">
+    <!-- CONTACT FORM HERE -->
+    <form action="/modificar" id="appointment-form" role="form" method="post">
+
+        <!-- SECTION TITLE -->
+        <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+            <h2>Actualizar Perfil Paciente</h2>
+        </div>
+
+        <div class="wow fadeInUp" data-wow-delay="0.8s">
+            <!-- <div class="col-md-6 col-sm-6">
+                <label for="name">Fecha de nacimiento</label>
+                <input type="text" class="form-control" id="name" name="fNacimiento" value="<%=cit.fNacimiento %>">
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <label for="name">Dependencia</label>
+                <input type="text" class="form-control" id="apellido" name="dependencia" value="<%=cit.dependencia %>">
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <label for="name">Observaciones</label>
+                <input type="text" class="form-control" id="email" name="observaciones" value="<%=cit.observaciones %>">
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <label for="number">Profesional</label>
+                <input type="number" class="form-control" id="telefono" name="profesional" value="<%=cit.profesiona %>">
+            </div> -->
+
+            <!-- <div class="col-md-6 col-sm-6">
+                <label for="number">Email</label>
+                <input type="number" class="form-control" id="familiar" name="email" value="<%=cit.email %>">
+            </div> -->
+
+            <!-- <div class="col-md-6 col-sm-6">
+                <label for="number">Email</label>
+                <input type="number" class="form-control" id="familiar" name="email" value="<%=cit.email %>">
+            </div> -->
+
+            <div class="col-md-6 col-sm-6" hidden="true">
+                <label for="name">Email</label>
+                <input type="email"  class="form-control" id="email" name="email" value="<%=cit.email %>">
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <label for="text">Diagnóstico:</label>
+                <textarea class="form-control" name="diagnostico" id="diagnostico" cols="30" rows="10" value="<%=cit.diagnostico %>""></textarea>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <label for="text">Antecedentes:</label>
+                <textarea class="form-control" name="antecedentes" id="antecedentes" cols="30" rows="10" value="<%=cit.antecedentes %>""></textarea>
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+                <label for="text">Peso:</label>
+                <input type="text" class="form-control" id="peso" name="peso"
+                    value="<%=cit.peso %>">
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <label for="text">Talla:</label>
+                <input type="text" class="form-control" id="talla" name="talla"
+                    value="<%=cit.talla %>">
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-info">Actualizar</button>
+            <button type="/profile" class="btn btn-info">Volver</button>
+        </div>
+        
+    </form>
+</div>
+
+<% } %>
+
+<%- include('_footer.ejs') %>
